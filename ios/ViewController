@@ -1,0 +1,48 @@
+ //
+//  ViewController.swift
+//  BirthdayInDays
+//
+//  Created by Sam Kling on 1/17/15.
+//  Copyright (c) 2015 Sam Kling. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var yearTextField: UITextField!
+    @IBOutlet weak var dayTextField: UITextField!
+    @IBOutlet weak var monthTextField: UITextField!
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+
+    @IBAction func daysButtonPressed(sender: AnyObject) {
+        
+        println("Days Button Pressed")
+        
+        messageLabel.text = "Button Pressed"
+        
+        
+        var dateComponents = NSDateComponents()
+        dateComponents.day = 25
+        dateComponents.month = 8
+        dateComponents.year = 1995
+        
+        var calendar = NSCalendar(identifier: NSGregorianCalendar)
+        var birthDate = calendar?.dateFromComponents(dateComponents) //NSdate type
+        var currentDate = NSDate()
+        
+        println(birthDate)
+        println("Current Date \(currentDate)")
+        
+    }
+
+}
+
