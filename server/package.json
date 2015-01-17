@@ -1,0 +1,7 @@
+{
+    "name": "idea",
+    "dependencies": {
+	"express": "*",
+	"mongodb": "*"
+    }
+}
