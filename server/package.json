@@ -1,7 +1,8 @@
 {
     "name": "idea",
+    "main": "server.js",
     "dependencies": {
+	"mongodb": "*",
 	"express": "*",
-	"mongodb": "*"
     }
 }

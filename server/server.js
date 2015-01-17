@@ -1,8 +1,10 @@
-var http = require('http');
 var express = require('express');
 var app = express();
+var path = require('path');
 
-var server = http.createServer( function (req, res) {
-
+app.get("/", function(req, res) {
+    res.sendFile('index.html', {root: path.join(__dirname, "../site")});
 });
-server.listen(3000);
+
+app.listen(8888);
+console.log("Server created at localhost:8888");
