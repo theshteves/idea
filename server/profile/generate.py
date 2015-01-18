@@ -52,6 +52,8 @@ def main(decider):
 
 user_in = int(input())
 
-new_user = main(user_in)
+new_user = json.dumps(main(user_in),ensure_ascii = False)
+
 
 print(new_user)
+
