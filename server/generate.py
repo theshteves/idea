@@ -23,9 +23,35 @@ def generator(doc,amount,total):
 			count += 1
 	return a_list
 
+def main(decider):
+	person_list = []
 
-traits = generator("traits.txt",4,638)
-#first_name = generator("firstnames.txt",1,)
-#last_name = generator("lastname.txt",1)
+	if decider == 1:
+		first_name_male = generator("firstname_male.txt",1,100)
+		person_list.extend(first_name_male)
+	else:
+		first_name_female = generator("firstname_female.txt",1,100)
+		person_list.extend(first_name_female)
+	
+	last_name = generator("lastnames.txt",1,100)
+	person_list.extend(last_name)
+	
+	traits = generator("traits.txt",4,638)
+	person_list.extend(traits)
 
-print(traits)
+	person_dict = {}
+	info_list = ['First Name', 'Last Name', 'Trait 1', 'Trait 2','Trait 3','Trait 4']
+	for i in info_list:
+		for j in person_list:
+			person_dict[i] = j
+			person_list.pop(0)
+			break
+
+	return person_dict
+
+
+user_in = int(input())
+
+new_user = main(user_in)
+
+print(new_user)
