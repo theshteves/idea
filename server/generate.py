@@ -25,7 +25,7 @@ def generator(doc,amount,total):
 
 
 traits = generator("traits.txt",4,638)
-#first_name = generator("firstname.txt",1,)
+#first_name = generator("firstnames.txt",1,)
 #last_name = generator("lastname.txt",1)
 
 print(traits)
