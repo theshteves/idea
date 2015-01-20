@@ -1,0 +1,58 @@
+main {
+    background-color: #B6AFA9;
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    background-position: center bottom;
+}
+#toolbar {
+    background-color: #5F9EA0;
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10%;
+}
+#join {
+    background-color: #42ff23;
+    color: black;
+    display: block;
+    position: absolute;
+    height: 50%;
+    width: 10%;
+    bottom: 20%;
+    right: 10%;
+    padding-top: .5%;
+    text-align: center;
+    font-size: 18pt;
+    border-radius: 20px;
+}
+header {
+    background-color: #000000;
+    opacity: 0;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+}
+h1 {
+    font-family: ‘Arial Narrow’, sans-serif;
+    text-shadow: #fff 0px 0px 3px;
+    font-size: 50pt;
+    font-weight: 100;
+    text-align: center;
+    color: white;
+}
+#wallpaper {
+    background-attachment: fixed;
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: -10%;
+    left: 0;
+}
