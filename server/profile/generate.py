@@ -32,10 +32,10 @@ def main(decider):
 	else:
 		first_name_female = generator("firstname_female.txt",1,100)
 		person_list.extend(first_name_female)
-	
+
 	last_name = generator("lastnames.txt",1,100)
 	person_list.extend(last_name)
-	
+
 	traits = generator("traits.txt",4,638)
 	person_list.extend(traits)
 
