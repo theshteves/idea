@@ -1,5 +1,6 @@
-import json
+import sys
 import random
+import json
 
 def generator(doc,amount,total):
 	rand_list = random.sample(range(1,total),amount)
@@ -26,16 +27,16 @@ def main(decider):
 	person_list = []
 
 	if decider == 1:
-		first_name_male = generator("firstname_male.txt",1,100)
+		first_name_male = generator("profile/firstname_male.txt",1,100)
 		person_list.extend(first_name_male)
 	else:
-		first_name_female = generator("firstname_female.txt",1,100)
+		first_name_female = generator("profile/firstname_female.txt",1,100)
 		person_list.extend(first_name_female)
 
-	last_name = generator("lastnames.txt",1,100)
+	last_name = generator("profile/lastnames.txt",1,100)
 	person_list.extend(last_name)
 
-	traits = generator("traits.txt",4,638)
+	traits = generator("profile/traits.txt",4,638)
 	person_list.extend(traits)
 
 	person_dict = {}
@@ -48,10 +49,8 @@ def main(decider):
 
 	return person_dict
 
-
-user_in = int(input())
+user_in = int(sys.argv[1])
 
 new_user = json.dumps(main(user_in),ensure_ascii = False)
-
 
 print(new_user)
