@@ -1,9 +1,21 @@
 {
     "name": "idea",
-    "main": "server.js",
+    "author": "Steven Kneiser <stevenkneiser@gmail.com>",
+    "contributors":  [{
+	"name": "Sam Kling",
+	"email": "klingsam@msu.edu"
+    }],
+    "scripts": {
+	"start": "node server.js"
+    },
+    "repository": {
+	"type": "git",
+	"url": "https://github.com/theshteves/idea.git"
+    },
     "dependencies": {
-	"mongodb": "*",
-	"express": "*",
-	"python-shell": "*"
-    }
+	"express": "4.11.x",
+	"python-shell": "0.0.x",
+	"gun": "0.0.x"
+    },
+    "private": true
 }
